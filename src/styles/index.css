@@ -10,3 +10,38 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body {
+    background: whitesmoke;
+}
+
+.title {
+    font-size: xx-large;
+    font-family: 'Fredoka', sans-serif;
+    text-align: center;
+}
+
+.button {
+    font-size: large;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+.number {
+    font-size: medium;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.icon {
+    font-size: medium;
+}
+
+.task {
+    background: #90AACB;
+    width: 500px;
+    margin: 10em auto;
+    border-radius: 5px;
+    padding: 20px 10px;
+    color: white;
+    border: 3px solid rgb(0, 0, 0);
+    text-align: left;
+}
