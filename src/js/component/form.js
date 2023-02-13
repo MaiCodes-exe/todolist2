@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function Form() {
   const [newTask, setnewTask] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const [Tasks, setTasks] = useState([]);
   useEffect(() => {
     fetch("https://assets.breatheco.de/apis/fake/todos/user/mars", {
       method: "GET",
@@ -26,7 +26,7 @@ function Form() {
   useEffect(() => {
     fetch("https://assets.breatheco.de/apis/fake/todos/user/mars", {
       method: "PUT",
-      body: JSON.stringify(tasks),
+      body: JSON.stringify(Tasks),
       headers: {
         "Content-Type": "application/json",
       },
@@ -43,20 +43,20 @@ function Form() {
         //error handling
         console.log(error);
       });
-  }, [tasks]);
+  }, [Tasks]);
   const handleChange = (e) => {
     setInput(e.target.value);
   };
 
   function addTask() {
-    setTasks([...tasks, { label: newTask, done: false }]);
+    setTasks([...Tasks, { label: newTask, done: false }]);
   }
   function deleteTask(index) {
-    var delarray = [...tasks];
+    var delarray = [...Tasks];
     delarray.splice(index, 1);
     setTasks(delarray);
   }
-  const taskList = tasks.map((object, index) => {
+  const taskList = Tasks.map((object, index) => {
     return (
       <div>
         <h1 className="number">
