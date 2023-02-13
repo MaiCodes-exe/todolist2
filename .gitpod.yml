@@ -9,6 +9,6 @@ tasks:
     command: npm run start
 
 
-vscode:
-  extensions:
-    - esbenp.prettier-vscode
+# vscode:
+#   extensions:
+#     - esbenp.prettier-vscode
